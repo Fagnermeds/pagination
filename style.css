@@ -1,0 +1,69 @@
+:root {
+  --black: #130f0d;
+  --primary: hsl(32, 98%, 56%);
+  --white: #f0f0f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(32, 98%, 5%);
+
+  padding: 16px;
+}
+
+#paginate {
+  width: 100%;
+
+  margin: 32px auto;
+}
+
+#paginate .list .item {
+  border-bottom: 1px solid hsl(32, 98%, 12%);
+  padding: 16px 32px;
+}
+
+#paginate .list .item:hover {
+  background-color: rgba(255,255 ,255, 0.04);
+}
+
+#paginate .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 24px;
+}
+
+#paginate .pagination div {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+}
+
+#paginate .pagination div:not(.numbers),
+#paginate .pagination div.numbers div {
+  width: 40px;
+  height: 32px;
+}
+
+#paginate .pagination div.numbers div:hover, 
+#paginate .pagination div.numbers div.active {
+  color: var(--primary);
+}
